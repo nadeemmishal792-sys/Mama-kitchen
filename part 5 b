@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | About</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+🍲 Mama Kitchen
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+<section class="about-page">
+
+
+<div class="about-image">
+
+<img src="assets/images/restaurant.jpg">
+
+</div>
+
+
+
+<div class="about-content">
+
+
+<h1>
+About Mama Kitchen
+</h1>
+
+
+<p>
+
+Mama Kitchen is a premium restaurant serving delicious Pakistani and international cuisine.
+
+Our mission is to provide fresh, tasty and high-quality food prepared with traditional recipes and modern cooking techniques.
+
+</p>
+
+
+
+<p>
+
+From spicy biryani and BBQ specialties to fast food and desserts, every dish is made with passion and care.
+
+</p>
+
+
+
+<a href="menu.html" class="primary">
+
+Explore Menu
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="why">
+
+
+<h2>
+Our Values
+</h2>
+
+
+
+<div class="why-grid">
+
+
+<div>
+
+<i class="fas fa-leaf"></i>
+
+<h3>
+Fresh Ingredients
+</h3>
+
+<p>
+We use fresh and quality ingredients.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fas fa-user-chef"></i>
+
+<h3>
+Expert Chefs
+</h3>
+
+<p>
+Experienced chefs create amazing flavors.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fas fa-heart"></i>
+
+<h3>
+Customer Love
+</h3>
+
+<p>
+Your satisfaction is our priority.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<h2>
+🍲 Mama Kitchen
+</h2>
+
+
+<p>
+Taste that brings families together.
+</p>
+
+
+<p>
+© 2026 Mama Kitchen
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | Contact</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+
+🍲 Mama Kitchen
+
+</div>
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+<section class="contact-page">
+
+
+<h1>
+Contact Us
+</h1>
+
+
+<p>
+Have questions? We would love to hear from you.
+</p>
+
+
+
+
+
+<div class="contact-container">
+
+
+
+<div class="contact-info">
+
+
+<h2>
+Get In Touch
+</h2>
+
+
+<p>
+📍 Main Street, Pakistan
+</p>
+
+
+<p>
+📞 +92 300 1234567
+</p>
+
+
+<p>
+📧 info@mamakitchen.com
+</p>
+
+
+<p>
+🕒 Open Daily: 12 PM - 12 AM
+</p>
+
+
+</div>
+
+
+
+
+
+<form class="contact-form">
+
+
+<input 
+type="text"
+placeholder="Your Name"
+required>
+
+
+
+<input 
+type="email"
+placeholder="Your Email"
+required>
+
+
+
+<input 
+type="text"
+placeholder="Subject"
+required>
+
+
+
+<textarea
+placeholder="Your Message"
+rows="5">
+</textarea>
+
+
+
+<button class="primary">
+
+Send Message
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+🍲 Mama Kitchen
+</h2>
+
+
+<p>
+© 2026 Mama Kitchen. All Rights Reserved.
+</p>
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>
+/* =========================
+ABOUT PAGE
+========================= */
+
+
+.about-page{
+
+padding:80px 8%;
+
+display:flex;
+
+align-items:center;
+
+gap:50px;
+
+}
+
+
+
+.about-image,
+.about-content{
+
+width:50%;
+
+}
+
+
+
+.about-image img{
+
+width:100%;
+
+border-radius:30px;
+
+}
+
+
+
+
+.about-content h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.about-content p{
+
+color:#666;
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* =========================
+CONTACT PAGE
+========================= */
+
+
+.contact-page{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+
+
+.contact-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+
+
+
+.contact-info,
+.contact-form{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+
+
+.contact-form input,
+.contact-form textarea{
+
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border:1px solid #ddd;
+
+border-radius:15px;
+
+font-size:16px;
+
+}
+
+
+
+.contact-form button{
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.about-page{
+
+flex-direction:column;
+
+}
+
+
+
+.about-image,
+.about-content{
+
+width:100%;
+
+}
+
+
+
+}
