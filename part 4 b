@@ -1,0 +1,254 @@
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+
+function addCart(name,price){
+
+
+let existing =
+cart.find(item=>item.name===name);
+
+
+
+if(existing){
+
+
+existing.quantity++;
+
+
+}
+
+else{
+
+
+cart.push({
+
+name:name,
+
+price:price,
+
+quantity:1
+
+
+});
+
+
+}
+
+
+
+saveCart();
+
+
+
+alert(name+" added to cart");
+
+
+}
+
+
+
+
+function saveCart(){
+
+
+localStorage.setItem(
+
+"cart",
+
+JSON.stringify(cart)
+
+);
+
+
+}
+
+
+
+
+function loadCart(){
+
+
+let container =
+document.getElementById("cartItems");
+
+
+
+if(!container)
+return;
+
+
+
+container.innerHTML="";
+
+
+let total=0;
+
+
+
+cart.forEach((item,index)=>{
+
+
+total += item.price * item.quantity;
+
+
+
+container.innerHTML += `
+
+
+<div class="cart-box">
+
+
+<h3>
+
+${item.name}
+
+</h3>
+
+
+<p>
+
+Price: Rs.${item.price}
+
+</p>
+
+
+<div>
+
+
+<button onclick="changeQty(${index},-1)">
+-
+</button>
+
+
+
+<span>
+
+${item.quantity}
+
+</span>
+
+
+
+<button onclick="changeQty(${index},1)">
++
+</button>
+
+
+
+<button onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+`;
+
+
+
+});
+
+
+
+document.getElementById("total").innerHTML=
+
+"Rs. "+total;
+
+
+
+}
+
+
+
+
+function changeQty(index,value){
+
+
+cart[index].quantity += value;
+
+
+
+if(cart[index].quantity<=0){
+
+cart.splice(index,1);
+
+}
+
+
+saveCart();
+
+loadCart();
+
+
+}
+
+
+
+
+function removeItem(index){
+
+
+cart.splice(index,1);
+
+
+saveCart();
+
+
+loadCart();
+
+
+}
+
+
+
+
+function whatsappOrder(){
+
+
+
+let message="Mama Kitchen Order:%0A";
+
+
+cart.forEach(item=>{
+
+
+message +=
+
+`${item.name} x ${item.quantity} = Rs.${item.price*item.quantity}%0A`;
+
+
+
+});
+
+
+
+message +=
+
+"Total: "+
+
+document.getElementById("total").innerText;
+
+
+
+window.open(
+
+"https://wa.me/923001234567?text="+message
+
+);
+
+
+}
+
+
+
+
+loadCart();
