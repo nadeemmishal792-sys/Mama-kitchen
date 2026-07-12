@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | Menu</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+🍲 Mama Kitchen
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="menu-page">
+
+
+<h1>
+Our Complete Menu
+</h1>
+
+
+<p>
+Fresh homemade Pakistani and international dishes
+</p>
+
+
+
+<!-- SEARCH -->
+
+<input 
+type="text"
+id="search"
+placeholder="Search food..."
+onkeyup="searchFood()"
+>
+
+
+
+
+<!-- FILTER BUTTONS -->
+
+
+<div class="filters">
+
+
+<button onclick="filterMenu('all')">
+All
+</button>
+
+
+<button onclick="filterMenu('Pakistani')">
+Pakistani
+</button>
+
+
+<button onclick="filterMenu('BBQ')">
+BBQ
+</button>
+
+
+<button onclick="filterMenu('Fast Food')">
+Fast Food
+</button>
+
+
+<button onclick="filterMenu('Chinese')">
+Chinese
+</button>
+
+
+<button onclick="filterMenu('Dessert')">
+Dessert
+</button>
+
+
+</div>
+
+
+
+
+<div id="menuContainer"
+class="food-grid">
+
+</div>
+
+
+
+</section>
+
+
+
+
+<script src="assets/js/menu.js"></script>
+
+
+</body>
+
+</html>
