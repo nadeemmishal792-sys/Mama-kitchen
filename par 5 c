@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | Checkout</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+🍲 Mama Kitchen
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="cart.html">Cart 🛒</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="checkout-page">
+
+
+<h1>
+Complete Your Order
+</h1>
+
+
+
+<div class="checkout-container">
+
+
+
+<div class="order-summary">
+
+
+<h2>
+Order Summary
+</h2>
+
+
+<div id="checkoutItems">
+
+</div>
+
+
+<h2>
+
+Total:
+<span id="checkoutTotal">
+Rs.0
+</span>
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<form class="checkout-form"
+onsubmit="placeOrder(event)">
+
+
+
+<input 
+type="text"
+id="customerName"
+placeholder="Full Name"
+required>
+
+
+
+<input 
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+
+
+<textarea
+id="address"
+placeholder="Delivery Address"
+required></textarea>
+
+
+
+
+<select id="payment">
+
+
+<option>
+Cash On Delivery
+</option>
+
+
+<option>
+Online Payment
+</option>
+
+
+</select>
+
+
+
+
+<button class="primary">
+
+Place Order
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+🍲 Mama Kitchen
+</h2>
+
+
+<p>
+Thank you for choosing us.
+</p>
+
+
+<p>
+© 2026 Mama Kitchen
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="assets/js/checkout.js"></script>
+
+
+</body>
+
+</html>
+let checkoutCart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+
+
+let checkoutBox =
+document.getElementById("checkoutItems");
+
+
+let totalBox =
+document.getElementById("checkoutTotal");
+
+
+
+function loadCheckout(){
+
+
+let total=0;
+
+
+checkoutBox.innerHTML="";
+
+
+
+checkoutCart.forEach(item=>{
+
+
+let amount =
+item.price * item.quantity;
+
+
+total += amount;
+
+
+
+checkoutBox.innerHTML += `
+
+<div class="checkout-item">
+
+<h3>
+${item.name}
+</h3>
+
+
+<p>
+Quantity: ${item.quantity}
+</p>
+
+
+<p>
+Rs.${amount}
+</p>
+
+
+</div>
+
+`;
+
+
+
+});
+
+
+
+totalBox.innerHTML =
+"Rs."+total;
+
+
+}
+
+
+
+function placeOrder(e){
+
+
+e.preventDefault();
+
+
+
+let name =
+document.getElementById("customerName").value;
+
+
+let phone =
+document.getElementById("phone").value;
+
+
+let address =
+document.getElementById("address").value;
+
+
+
+alert(
+"Thank you "+name+
+"! Your order has been received."
+);
+
+
+
+localStorage.removeItem("cart");
+
+
+
+window.location.href="index.html";
+
+
+}
+
+
+
+loadCheckout();
+/* =========================
+CHECKOUT PAGE
+========================= */
+
+
+.checkout-page{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+
+
+.checkout-container{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+
+
+.order-summary,
+.checkout-form{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+
+
+.checkout-item{
+
+border-bottom:1px solid #ddd;
+
+padding:15px;
+
+}
+
+
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select{
+
+
+width:100%;
+
+padding:15px;
+
+margin:12px 0;
+
+border-radius:15px;
+
+border:1px solid #ddd;
+
+font-size:16px;
+
+}
+
+
+
+
+.checkout-form textarea{
+
+resize:none;
+
+}
+
+
+
+
+.checkout-form button{
+
+width:100%;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* MOBILE FINAL FIX */
+
+
+@media(max-width:700px){
+
+
+.hero-content h1{
+
+font-size:35px;
+
+}
+
+
+
+.checkout-page,
+.contact-page,
+.about-page,
+.cart-page{
+
+padding:50px 5%;
+
+}
+
+
+}
