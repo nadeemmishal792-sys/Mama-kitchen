@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | Homemade Pakistani Food</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-bowl-food"></i>
+Mama Kitchen
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="catering.html">Catering</a>
+<a href="contact.html">Contact</a>
+
+
+<a href="cart.html">
+<i class="fa-solid fa-cart-shopping"></i>
+Cart
+</a>
+
+
+</nav>
+
+
+<div class="mobile-menu">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+Authentic Homemade Taste
+<br>
+From Mama's Kitchen
+</h1>
+
+
+<p>
+Fresh Pakistani meals prepared with love,
+quality ingredients and traditional recipes.
+</p>
+
+
+
+<div class="hero-buttons">
+
+<a class="primary"
+href="menu.html">
+View Menu
+</a>
+
+
+<a class="secondary"
+href="contact.html">
+Order Now
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="hero-image">
+
+<img src="assets/images/hero-food.jpg"
+alt="Mama Kitchen Food">
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- CATEGORIES -->
+
+
+<section class="categories">
+
+
+<h2>
+Our Special Categories
+</h2>
+
+
+<div class="category-grid">
+
+
+<div class="category-card">
+<i class="fa-solid fa-bowl-rice"></i>
+<h3>Biryani</h3>
+<p>From Rs.650</p>
+</div>
+
+
+
+<div class="category-card">
+<i class="fa-solid fa-drumstick-bite"></i>
+<h3>BBQ</h3>
+<p>From Rs.850</p>
+</div>
+
+
+
+
+<div class="category-card">
+<i class="fa-solid fa-fire"></i>
+<h3>Karahi</h3>
+<p>From Rs.2200</p>
+</div>
+
+
+
+
+<div class="category-card">
+<i class="fa-solid fa-pizza-slice"></i>
+<h3>Pizza</h3>
+<p>From Rs.1800</p>
+</div>
+
+
+
+
+<div class="category-card">
+<i class="fa-solid fa-burger"></i>
+<h3>Burgers</h3>
+<p>From Rs.700</p>
+</div>
+
+
+
+
+<div class="category-card">
+<i class="fa-solid fa-utensils"></i>
+<h3>Chinese</h3>
+<p>From Rs.1000</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- FEATURED FOOD -->
+
+
+<section class="featured">
+
+
+<h2>
+Customer Favorites
+</h2>
+
+
+
+<div class="food-grid">
+
+
+
+<div class="food-card">
+
+<img src="assets/images/biryani.jpg">
+
+
+<h3>
+Chicken Biryani
+</h3>
+
+<p>
+Rs.650
+</p>
+
+
+<button onclick="addCart('Chicken Biryani',650)">
+Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="food-card">
+
+
+<img src="assets/images/karahi.jpg">
+
+
+<h3>
+Chicken Karahi
+</h3>
+
+
+<p>
+Rs.2200
+</p>
+
+
+<button onclick="addCart('Chicken Karahi',2200)">
+Add To Cart
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="food-card">
+
+
+<img src="assets/images/burger.jpg">
+
+
+<h3>
+Zinger Burger
+</h3>
+
+
+<p>
+Rs.720
+</p>
+
+
+
+<button onclick="addCart('Zinger Burger',720)">
+Add To Cart
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- WHY US -->
+
+
+<section class="why">
+
+
+<h2>
+Why Choose Mama Kitchen?
+</h2>
+
+
+
+<div class="why-grid">
+
+
+<div>
+<i class="fa-solid fa-heart"></i>
+<h3>Made With Love</h3>
+<p>Traditional homemade recipes.</p>
+</div>
+
+
+
+<div>
+<i class="fa-solid fa-leaf"></i>
+<h3>Fresh Ingredients</h3>
+<p>Quality food every day.</p>
+</div>
+
+
+
+<div>
+<i class="fa-solid fa-truck"></i>
+<h3>Fast Delivery</h3>
+<p>Fresh food at your door.</p>
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<h2>
+Mama Kitchen
+</h2>
+
+
+<p>
+Homemade Food • Pakistani Cuisine • Catering
+</p>
+
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+
+</div>
+
+
+
+<p>
+© 2026 Mama Kitchen. All Rights Reserved.
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
