@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mama Kitchen | Cart</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+🍲 Mama Kitchen
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="cart.html">Cart</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+<section class="cart-page">
+
+
+<h1>
+Your Shopping Cart
+</h1>
+
+
+
+<div id="cartItems">
+
+</div>
+
+
+
+<div class="cart-summary">
+
+
+<h2>
+Total:
+<span id="total">
+Rs. 0
+</span>
+</h2>
+
+
+
+<a href="checkout.html"
+class="primary">
+
+Proceed To Checkout
+
+</a>
+
+
+<br><br>
+
+
+<button onclick="whatsappOrder()"
+class="secondary">
+
+Order On WhatsApp
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<script src="assets/js/cart.js"></script>
+
+
+</body>
+
+</html>
