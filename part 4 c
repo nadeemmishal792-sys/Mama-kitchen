@@ -1,0 +1,91 @@
+/* =========================
+   CART PAGE
+========================= */
+
+
+.cart-page{
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+
+
+.cart-box{
+
+
+background:white;
+
+padding:25px;
+
+margin:20px auto;
+
+max-width:600px;
+
+border-radius:20px;
+
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.cart-box button{
+
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:20px;
+
+background:#c1121f;
+
+color:white;
+
+margin:5px;
+
+cursor:pointer;
+
+
+}
+
+
+
+.cart-box span{
+
+
+font-size:20px;
+
+font-weight:bold;
+
+margin:10px;
+
+
+}
+
+
+
+.cart-summary{
+
+
+margin-top:40px;
+
+
+}
+
+
+
+.cart-summary h2{
+
+
+margin-bottom:25px;
+
+
+}
