@@ -1,0 +1,296 @@
+const menuItems = [
+
+{
+name:"Chicken Biryani",
+category:"Pakistani",
+price:650,
+image:"biryani.jpg"
+},
+
+{
+name:"Beef Biryani",
+category:"Pakistani",
+price:850,
+image:"biryani.jpg"
+},
+
+{
+name:"Mutton Biryani",
+category:"Pakistani",
+price:1200,
+image:"biryani.jpg"
+},
+
+
+{
+name:"Chicken Karahi",
+category:"Pakistani",
+price:2200,
+image:"karahi.jpg"
+},
+
+
+{
+name:"Mutton Karahi",
+category:"Pakistani",
+price:3200,
+image:"karahi.jpg"
+},
+
+
+{
+name:"Chicken Handi",
+category:"Pakistani",
+price:2400,
+image:"handi.jpg"
+},
+
+
+{
+name:"Chicken Tikka",
+category:"BBQ",
+price:900,
+image:"tikka.jpg"
+},
+
+
+{
+name:"Malai Boti",
+category:"BBQ",
+price:1100,
+image:"bbq.jpg"
+},
+
+
+{
+name:"Seekh Kabab",
+category:"BBQ",
+price:850,
+image:"kabab.jpg"
+},
+
+
+{
+name:"Chicken Wings BBQ",
+category:"BBQ",
+price:950,
+image:"wings.jpg"
+},
+
+
+{
+name:"Zinger Burger",
+category:"Fast Food",
+price:720,
+image:"burger.jpg"
+},
+
+
+{
+name:"Beef Burger",
+category:"Fast Food",
+price:950,
+image:"burger.jpg"
+},
+
+
+{
+name:"Chicken Shawarma",
+category:"Fast Food",
+price:450,
+image:"shawarma.jpg"
+},
+
+
+{
+name:"Chicken Pizza Large",
+category:"Fast Food",
+price:2200,
+image:"pizza.jpg"
+},
+
+
+{
+name:"Cheese Pizza",
+category:"Fast Food",
+price:1900,
+image:"pizza.jpg"
+},
+
+
+{
+name:"Chicken Chow Mein",
+category:"Chinese",
+price:1200,
+image:"chinese.jpg"
+},
+
+
+{
+name:"Chicken Fried Rice",
+category:"Chinese",
+price:1100,
+image:"rice.jpg"
+},
+
+
+{
+name:"Chicken Manchurian",
+category:"Chinese",
+price:1400,
+image:"chinese.jpg"
+},
+
+
+{
+name:"Spring Rolls",
+category:"Chinese",
+price:500,
+image:"roll.jpg"
+},
+
+
+{
+name:"Chocolate Cake",
+category:"Dessert",
+price:1200,
+image:"cake.jpg"
+},
+
+
+{
+name:"Gulab Jamun",
+category:"Dessert",
+price:450,
+image:"gulab.jpg"
+},
+
+
+{
+name:"Kheer",
+category:"Dessert",
+price:500,
+image:"kheer.jpg"
+},
+
+
+{
+name:"Fresh Juice",
+category:"Dessert",
+price:350,
+image:"juice.jpg"
+}
+
+
+];
+
+
+
+let container=document.getElementById("menuContainer");
+
+
+
+function displayMenu(items){
+
+
+container.innerHTML="";
+
+
+items.forEach(food=>{
+
+
+container.innerHTML += `
+
+
+<div class="food-card">
+
+
+<img src="assets/images/${food.image}">
+
+
+<h3>${food.name}</h3>
+
+
+<p>
+Rs. ${food.price}
+</p>
+
+
+
+<button onclick="addCart('${food.name}',${food.price})">
+
+Add To Cart
+
+</button>
+
+
+</div>
+
+
+`;
+
+});
+
+
+}
+
+
+
+displayMenu(menuItems);
+
+
+
+
+
+function filterMenu(category){
+
+
+if(category=="all"){
+
+displayMenu(menuItems);
+
+return;
+
+}
+
+
+
+let filtered =
+menuItems.filter(
+item=>item.category==category
+);
+
+
+displayMenu(filtered);
+
+
+}
+
+
+
+
+function searchFood(){
+
+
+let text=
+document.getElementById("search")
+.value
+.toLowerCase();
+
+
+
+let result=
+menuItems.filter(item=>
+
+item.name
+.toLowerCase()
+.includes(text)
+
+);
+
+
+
+displayMenu(result);
+
+
+}
